@@ -1,0 +1,98 @@
+#canvas{
+  background: gray;
+  position: absolute;
+
+  top: 20vh;
+  left:16%;
+}
+
+.pics{
+  position: absolute;
+  display: block;
+  background: rgba(244, 244, 244, 0.95);
+  text-align: center;
+  color:gray;
+  font-size: 1.3em;
+  vertical-align: middle;
+  padding: 20px;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  z-index:10;
+}
+
+
+#til{
+  display:block;
+  position: absolute;
+  border: 1px solid #ccc;
+}
+
+#main{
+position: relative;
+padding: 0;
+
+height: 100vh;
+display: flex;
+text-align: center;
+}
+.next{
+  padding: 5px;
+  background: #199;
+  margin: auto 15% ;
+  align-self: center;
+  color: #eee;
+  text-shadow:2px 2px black;
+  cursor: pointer;
+}
+
+#options{
+
+width: 40vw;
+height: 100vh;
+border: 1px solid #ccc;
+text-align: center;
+align-items: center;
+}
+
+#view{
+  display:block;
+  width: 60vw;
+  height: 100vh;
+  margin-top:0;
+  text-align: center;
+  align-items: center;
+border: 1px solid #ccc;
+
+}
+.sol{
+  background: #5e5;
+  position: absolute;
+  color: white;
+  padding: 16px;
+  font-size: 1.2em;
+  text-align: center;
+}
+.unsol{
+  background: #e55;
+  position: absolute;
+  color: white;
+  padding: 16px;
+  font-size: 1.2em;
+  text-align: center;
+
+}
+.botn{
+  padding: 10px;
+  background: #399;
+  width: 50%;
+  margin-left:22%;
+  align-self: center;
+  color: #eee;
+  border-radius: 10px ;
+  text-shadow:2px 2px black;
+  cursor: pointer;
+}
+.form{
+  padding: 20px;
+}

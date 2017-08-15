@@ -1,0 +1,56 @@
+<div *ngIf="pic" >
+    <div class = "pics">
+      <img [src]="oiaddr[cpos]">
+      <p>You unlocked Image! Keep Playing for excitment</p>
+      <div (click)="closeview()" style="cursor:pointer">Close</div>
+    </div>
+</div>
+
+<div id = "main" >
+
+  <div id ="view" >
+    <p>Solve Mortal Kombat Quest  |  Unlock new pictures</p>
+    <hr>
+    <div id = "canvas" >
+
+        <div *ngFor="let img of imgArray; let i = index" id="til" [ngStyle]='cstyle[i]' (click)="clicked(i,1)">
+          <div class = "tile" [ngStyle] = 'tstyle[i]'>
+
+          </div>
+
+        </div>
+
+    </div>
+
+    <div (click) = "solve()"  class="next" *ngIf="solved"> Next </div>
+
+  </div>
+
+  <div id = "options" >
+<div [ngClass]="(solved)?'sol':'unsol'" style="position:relative">{{(solved)?'Congratulations! ':'Keep trying! '}}The puzzle is {{(solved)?'Solved':'Jumbled'}}</div>
+
+<!-- <form class = "form">
+  No. Rows:
+  <input [value]="m" (input)="m = $event.target.value">
+  No. Cols:
+  <input [value]="n" (input)="n = $event.target.value"> -->
+  <h1 (click) = "shuffle()" class = "botn">Shuffle</h1>
+
+  <h1 (click) = "reset()" class ="botn">Reset</h1>
+
+<!-- </form> -->
+
+
+
+
+    <!-- <select class="image-picker show-html">
+      <option *ngFor = "let itm of imgArray">  <img [src] = "itm">  </option>
+    </select> -->
+
+    <div style='background:rgba(0,0,0,0.9)'>
+      <img *ngFor="let itm of oiaddr;let i = index" [src] = "itm" style="width:100px;border:2px solid #ccf;padding 5px;" (click) = "showlpic(i)">
+
+    </div>
+    <p *ngIf="pos == 0" style ="width:50%;margin-left:23%;font-size:1.1em">Welcome to the Mortal Kombat Slider Puzzle Game. You would have to start solving the puzzles in this game to open new and exciting images of new Characters! play this game you will regret it as a good "Time Pass"</p>
+
+</div>
